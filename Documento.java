@@ -7,14 +7,6 @@ public class Documento {
     private LocalDateTime horarioSolicitacao; // Horário em que o documento foi solicitado
     private LocalDateTime horarioProcessamento; // Horário em que o documento foi impresso/reimpresso
 
-    /**
-     * Construtor para criar um novo documento.
-     * O horário de solicitação é registrado automaticamente no momento da criação.
-     * O horário de processamento é nulo inicialmente.
-     *
-     * @param nomeArquivo O nome do arquivo a ser impresso/reimpresso.
-     * @param nomeUsuario O nome do usuário que fez a solicitação.
-     */
     public Documento(String nomeArquivo, String nomeUsuario) {
         this.nomeArquivo = nomeArquivo;
         this.nomeUsuario = nomeUsuario;
@@ -47,17 +39,9 @@ public class Documento {
 
     // --- Métodos de Cálculo ---
 
-    /**
-     * Calcula o tempo total de espera (ou tempo decorrido) para o documento.
-     * O cálculo é feito da solicitação até o processamento.
-     * Só funciona se o documento já tiver um horário de processamento.
-     *
-     * @return Uma String formatada com o tempo decorrido (ex: "X minutos e Y segundos"),
-     * ou "Documento ainda não processado" se o horário de processamento for nulo.
-     */
     public String calcularTempoDecorrido() {
         if (horarioProcessamento == null) {
-            return "Documento ainda não processado.";
+            return "Documento ainda nao processado.";
         }
         Duration duracao = Duration.between(horarioSolicitacao, horarioProcessamento);
         long minutos = duracao.toMinutes();
@@ -65,11 +49,6 @@ public class Documento {
         return String.format("%d minuto(s) e %d segundo(s)", minutos, segundosRestantes);
     }
 
-    /**
-     * Retorna uma representação em String do objeto Documento.
-     * Útil para exibir as informações do documento.
-     * @return Uma String com os detalhes do documento.
-     */
     @Override
     public String toString() {
         String processado = (horarioProcessamento != null) ?
