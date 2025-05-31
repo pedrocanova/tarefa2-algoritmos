@@ -105,7 +105,7 @@ public class Fila {
         No runner = primeiro; // Começa do primeiro nó
         int i = 1;
         while (runner != null) {
-            s += "[" + i + "] " + runner.getInfo().getNomeArquivo() + " (Usuário: " + runner.getInfo().getNomeUsuario() + ")\n";
+            s += "[" + i + "] " + runner.getInfo().getNomeArquivo() + " (Usuario: " + runner.getInfo().getNomeUsuario() + ")\n";
             runner = runner.getProximo();
             i++;
         }

@@ -1,0 +1,6 @@
+IMPRIME,Relatorio_Mensal.pdf,Ana Silva
+REIMPRIME,Apresentacao_Urgente.pptx,Carlos Souza
+IMPRIME,Convite_Evento.docx,Beatriz Lima
+IMPRIME,Fatura_Cliente.pdf,Daniel Alves
+REIMPRIME,Desenho_Grafico.psd,Maria Pereira
+IMPRIME,Email_Importante.txt,João Rocha

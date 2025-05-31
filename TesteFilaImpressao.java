@@ -29,7 +29,7 @@ public class TesteFilaImpressao {
         System.out.println("Documento impresso: " + docImpresso1); // Deve mostrar o tempo de espera
         System.out.println(filaImpressao); // Mostra a fila após a impressão
 
-        System.out.println("\nDesenfileirando o próximo (Relatorio_Q1.docx):");
+        System.out.println("\nDesenfileirando o proximo (Relatorio_Q1.docx):");
         Documento docImpresso2 = filaImpressao.desenfileira();
         System.out.println("Documento impresso: " + docImpresso2);
         System.out.println(filaImpressao);
@@ -37,7 +37,7 @@ public class TesteFilaImpressao {
         System.out.println("\nConsultando 'Contrato.txt':");
         System.out.println(filaImpressao.consultaDocumento("Contrato.txt"));
 
-        System.out.println("\nDesenfileirando o último (Contrato.txt):");
+        System.out.println("\nDesenfileirando o ultimo (Contrato.txt):");
         Documento docImpresso3 = filaImpressao.desenfileira();
         System.out.println("Documento impresso: " + docImpresso3);
         System.out.println(filaImpressao); // Fila deve estar vazia
